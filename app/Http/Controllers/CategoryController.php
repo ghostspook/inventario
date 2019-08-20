@@ -30,6 +30,7 @@ class CategoryController extends Controller
 
         Category::create([ 'name' => $name ]);
 
-        return view('categories.index');
+        $categories = Category::all();
+        return view('categories.index', [ 'categories' => $categories ] );
     }
 }
