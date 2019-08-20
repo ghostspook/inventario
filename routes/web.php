@@ -25,5 +25,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
     Route::get('categories', ['as' => 'categories.list', 'uses' => 'CategoryController@index']);
+    Route::post('categories/store', ['as' => 'categories.store', 'uses' => 'CategoryController@store']);
 });
 
