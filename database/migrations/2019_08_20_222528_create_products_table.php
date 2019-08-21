@@ -18,12 +18,12 @@ class CreateProductsTable extends Migration
             $table->string('sku')->unique();
             $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->text('description');
-            $table->text('comments');
-            $table->decimal('stock', 10, 4);
-            $table->decimal('cost', 10, 4);
+            $table->text('description')->nullable();
+            $table->text('comments')->nullable();
+            $table->decimal('stock', 10, 4)->default(0);
+            $table->decimal('cost', 10, 4)->default(0);
             $table->decimal('price', 10, 4);
-            $table->string('rack');
+            $table->string('rack')->nullable();
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

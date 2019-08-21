@@ -12,7 +12,7 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'name' => 'Categoría 1',
+            'name' => 'AMPLIFICADORES MONOBLOCK',
             'created_at' => now(),
             'updated_at' => now()
         ]);
