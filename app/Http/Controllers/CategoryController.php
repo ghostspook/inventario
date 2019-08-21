@@ -30,7 +30,6 @@ class CategoryController extends Controller
 
         Category::create([ 'name' => $name ]);
 
-        $categories = Category::all();
-        return view('categories.index', [ 'categories' => $categories ] );
+        return redirect()->route('categories.list');
     }
 }
