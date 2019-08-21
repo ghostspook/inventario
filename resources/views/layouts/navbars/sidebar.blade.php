@@ -89,6 +89,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ route('products.index') }}">
+                        <i class="ni ni-app text-primary"></i> {{ __('Products') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ route('user.index') }}">
                         <i class="ni ni-single-02 text-primary"></i> {{ __('User Management') }}
                     </a>

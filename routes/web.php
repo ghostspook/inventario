@@ -26,5 +26,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('categories', ['as' => 'categories.list', 'uses' => 'CategoryController@index']);
     Route::post('categories/store', ['as' => 'categories.store', 'uses' => 'CategoryController@store']);
+	Route::resource('products', 'ProductController', ['except' => ['show']]);
 });
 
